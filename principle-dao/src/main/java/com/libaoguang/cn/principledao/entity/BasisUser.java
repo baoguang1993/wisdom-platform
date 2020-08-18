@@ -22,6 +22,10 @@ public class BasisUser {
     @TableField(value = "user_name")
     private String userName;
 
+
+    @TableField(value = "user_age")
+    private int age;
+
     @TableField(value = "create_time")
     private Date createTime;
 
