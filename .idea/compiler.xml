@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="principle-dao" />
+        <module name="principle-elegant" />
         <module name="principle-pro" />
         <module name="principle-common" />
         <module name="principle-query" />
@@ -22,6 +23,7 @@
       <module name="principle-cache" options="-parameters" />
       <module name="principle-common" options="-parameters" />
       <module name="principle-dao" options="-parameters" />
+      <module name="principle-elegant" options="-parameters" />
       <module name="principle-pro" options="-parameters" />
       <module name="principle-query" options="-parameters" />
     </option>
