@@ -7,15 +7,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="principle-pro" />
         <module name="principle-dao" />
+        <module name="principle-pro" />
+        <module name="principle-common" />
+        <module name="principle-query" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="principle-cache" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="principle-cache" options="-parameters" />
+      <module name="principle-common" options="-parameters" />
       <module name="principle-dao" options="-parameters" />
       <module name="principle-pro" options="-parameters" />
+      <module name="principle-query" options="-parameters" />
     </option>
   </component>
 </project>

@@ -7,7 +7,6 @@
     <groupId>com.libaoguang.cn</groupId>
     <artifactId>wisdom-platform</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <packaging>pom</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -18,6 +17,19 @@
     <modules>
         <module>principle-pro</module>
         <module>principle-dao</module>
+        <module>principle-common</module>
+        <module>principle-query</module>
     </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                  <classifier>exec</classifier>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

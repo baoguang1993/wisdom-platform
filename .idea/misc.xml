@@ -7,6 +7,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/principle-pro/pom.xml" />
         <option value="$PROJECT_DIR$/principle-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/principle-cache/pom.xml" />
+        <option value="$PROJECT_DIR$/principle-common/pom.xml" />
+        <option value="$PROJECT_DIR$/principle-query/pom.xml" />
       </list>
     </option>
   </component>
