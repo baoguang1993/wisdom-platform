@@ -1,7 +1,10 @@
 package com.libaoguang.cn.principlecommon.vo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.io.Serializable;
 
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class ResultVo<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
