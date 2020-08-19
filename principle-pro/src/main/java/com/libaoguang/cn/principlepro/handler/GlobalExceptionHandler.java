@@ -1,33 +1,24 @@
 package com.libaoguang.cn.principlepro.handler;
 
-
-
 import com.libaoguang.cn.principlecommon.vo.ResultVo;
-import lombok.extern.slf4j.Slf4j;
+import com.libaoguang.cn.principlecommon.exception.BaseException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
-
-@Slf4j
-@Aspect
-@Component
+@ControllerAdvice
 public class GlobalExceptionHandler {
-    private Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
-
-    @Around(value = "@annotation(com.libaoguang.cn.principlepro.annotation.ExceptionCatch)")
-    public ResultVo requrnValue(ProceedingJoinPoint proceedingJoinPoint) {
+    @ExceptionHandler(value = Exception.class)
+    @ResponseBody
+    public ResultVo handle(Exception e) {
         ResultVo resultVo;
-        try {
-            resultVo = (ResultVo) proceedingJoinPoint.proceed();
-        } catch (Throwable throwable) {
-            logger.error("GlobalExceptionHandler system error {}:" + throwable);
-            resultVo = ResultVo.failResult();
+        if (e instanceof BaseException) {
+            BaseException baseException = (BaseException) e;
+            resultVo = ResultVo.failResult(baseException);
+            return resultVo;
+        } else {
+            resultVo = ResultVo.unknownResult(e.getMessage());
+            return resultVo;
         }
-        return resultVo;
     }
 }

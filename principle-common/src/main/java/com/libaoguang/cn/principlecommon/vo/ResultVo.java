@@ -1,6 +1,8 @@
 package com.libaoguang.cn.principlecommon.vo;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.libaoguang.cn.principlecommon.enums.ResultEnum;
+import com.libaoguang.cn.principlecommon.exception.BaseException;
 
 import java.io.Serializable;
 
@@ -98,4 +100,26 @@ public class ResultVo<T> implements Serializable {
         resultVo.setResult(RESULT_FAIL);
         return resultVo;
     }
+    public static ResultVo failResult(BaseException baseException) {
+        ResultVo resultVo = new ResultVo();
+        resultVo.setCode(baseException.getCode()+"");
+        resultVo.setMessage(baseException.getMessage());
+        resultVo.setResult(RESULT_FAIL);
+        return resultVo;
+    }
+    public static ResultVo unknownResult(String message) {
+        ResultVo resultVo = new ResultVo();
+        resultVo.setCode("500");
+        resultVo.setMessage(message);
+        resultVo.setResult(RESULT_FAIL);
+        return resultVo;
+    }
+    public static ResultVo failResult(ResultEnum resultEnum) {
+        ResultVo resultVo = new ResultVo();
+        resultVo.setCode(resultEnum.getCode()+"");
+        resultVo.setMessage(resultEnum.getMsg());
+        resultVo.setResult(RESULT_FAIL);
+        return resultVo;
+    }
+
 }

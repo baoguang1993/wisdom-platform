@@ -1,4 +1,4 @@
-package com.libaoguang.cn.principlepro.enums;
+package com.libaoguang.cn.principlecommon.enums;
 
 public enum Day {
     MONDAY(1, "星期一", "各种不在状态"){
