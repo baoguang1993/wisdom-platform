@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/principle-common/pom.xml" />
         <option value="$PROJECT_DIR$/principle-query/pom.xml" />
         <option value="$PROJECT_DIR$/principle-elegant/pom.xml" />
+        <option value="$PROJECT_DIR$/principle-producer/pom.xml" />
+        <option value="$PROJECT_DIR$/principle-consumer/pom.xml" />
       </list>
     </option>
   </component>

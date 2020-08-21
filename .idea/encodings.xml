@@ -3,12 +3,16 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/principle-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/principle-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/principle-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/principle-consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/principle-dao/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/principle-dao/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/principle-elegant/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/principle-elegant/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/principle-pro/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/principle-pro/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/principle-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/principle-producer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/principle-query/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/principle-query/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
