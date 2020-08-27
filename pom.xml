@@ -19,6 +19,7 @@
         <module>principle-dao</module>
         <module>principle-common</module>
         <module>principle-query</module>
+        <module>principle-pdf</module>
     </modules>
     <build>
         <plugins>
