@@ -1,12 +1,22 @@
 package com.libaoguang.cn.principleproducer.springconfig;
 
-import com.libaoguang.cn.principleproducer.constants.QueueConstants;
 import org.springframework.amqp.core.*;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitMqConfiguration {
+
+    @Value("${myqueue.queuename}")
+    private String QUEUE_NAME;
+
+    @Value("${myqueue.myexchange}")
+    private String QUEUE_EXCHANGE;
+
+    @Value("${myqueue.myrote}")
+    private String QUEUE_ROTE;
+
     /**
      * 交换配置
      *
@@ -14,7 +24,7 @@ public class RabbitMqConfiguration {
      */
     @Bean
     public DirectExchange messageDirectExchange() {
-        return (DirectExchange) ExchangeBuilder.directExchange(QueueConstants.MESSAGE_EXCHANGE)
+        return (DirectExchange) ExchangeBuilder.directExchange(QUEUE_EXCHANGE)
                 .durable(true)
                 .build();
     }
@@ -26,7 +36,7 @@ public class RabbitMqConfiguration {
      */
     @Bean
     public Queue messageQueue() {
-        return QueueBuilder.durable(QueueConstants.MESSAGE_QUEUE_NAME)
+        return QueueBuilder.durable(QUEUE_NAME)
                 .build();
     }
 
@@ -39,7 +49,7 @@ public class RabbitMqConfiguration {
     public Binding messageBinding() {
         return BindingBuilder.bind(messageQueue())
                 .to(messageDirectExchange())
-                .with(QueueConstants.MESSAGE_ROUTE_KEY);
+                .with(QUEUE_ROTE);
     }
 
 

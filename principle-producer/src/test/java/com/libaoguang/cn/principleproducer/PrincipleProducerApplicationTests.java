@@ -16,12 +16,25 @@ class PrincipleProducerApplicationTests {
     @Test
    public void contextLoads() {
         String dateString = new SimpleDateFormat("YYYY-mm-DD hh:MM:ss").format(new Date());
-        System.out.println("[demoQueue] send msg: " + dateString);
         // 第一个参数为刚刚定义的队列名称
-        this.rabbitTemplate.convertAndSend("token-queue", dateString);
+        int i=0;
+        while (true){
+            this.rabbitTemplate.convertAndSend("message.queue", dateString+"---"+i);
+            System.out.println("queue"+dateString+"---"+i);
+            ++i;
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
-        boolean matches = dateString.matches("/str");
-      //  str9.matches("//d+");
+
+        }
+//        for(;;){
+//
+//        }
+
+
     }
 
     @Autowired
