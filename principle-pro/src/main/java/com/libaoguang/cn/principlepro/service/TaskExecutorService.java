@@ -13,6 +13,7 @@ public class TaskExecutorService {
     private static final Logger log= LoggerFactory.getLogger(TaskExecutorService.class);
     @Async("asyncTaskExecutor")
     public void eventExecutor(){
-        log.info("===eventExecutor===");
+        log.info("TaskExecutorService===eventExecutor===");
+        log.info(Thread.currentThread().getName());
     }
 }
