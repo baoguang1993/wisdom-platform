@@ -7,6 +7,9 @@ import com.libaoguang.cn.principleframework.core.annotation.Service;
 import com.libaoguang.cn.principleframework.utils.ClassUtils;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 import java.lang.annotation.Annotation;
@@ -17,8 +20,11 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 
+@Slf4j
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class BeanContainer {
+
+    private Logger logger = LoggerFactory.getLogger(BeanContainer.class);
 
     private boolean loaded = false;
     /**
@@ -48,6 +54,7 @@ public class BeanContainer {
      * 扫描加载所有的bean
      */
     public synchronized void loadBean(String pageageName) {
+
         if (isLoaded()) {
             return;
         }
@@ -104,6 +111,7 @@ public class BeanContainer {
         }
         return classSet.size() > 0 ? classSet : null;
     }
+
     public Set<Class<?>> getClassBySuper(Class<?> interfaceOrClass) {
         Set<Class<?>> classes = getClasses();
         if (classes == null || classes.isEmpty()) {
@@ -111,7 +119,7 @@ public class BeanContainer {
         }
         Set<Class<?>> classSet = new HashSet<>();
         for (Class<?> clazz : classes) {
-            if(interfaceOrClass.isAssignableFrom(clazz)){
+            if (interfaceOrClass.isAssignableFrom(clazz)) {
                 classSet.add(clazz);
             }
         }
