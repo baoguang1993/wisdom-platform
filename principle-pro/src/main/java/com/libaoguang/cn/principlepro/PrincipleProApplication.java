@@ -8,9 +8,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 
-@EnableAutoConfiguration
-@ComponentScan(basePackages = {"com.libaoguang.cn.principlepro","springconfig","com.libaoguang.cn.principledao"})
+@ComponentScan(basePackages = {"springconfig","com.libaoguang.cn.principlepro","com.libaoguang.cn.principledao"})
 @EnableDiscoveryClient
+@SpringBootApplication
 public class PrincipleProApplication {
 
     public static void main(String[] args) {

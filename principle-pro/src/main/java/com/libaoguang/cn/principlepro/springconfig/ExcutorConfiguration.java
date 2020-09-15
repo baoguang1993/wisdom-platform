@@ -27,25 +27,25 @@ private static final Logger log= LoggerFactory.getLogger(ExcutorConfiguration.cl
     /**
      * 核心线程数
      */
-    @Value("${async.excutor.thread.core_pool_zise}")
-    private int corePoolSize;
+   // @Value("${async.excutor.thread.core_pool_zise}")
+    private int corePoolSize=10;
 
     /**
      * 最大线程数
      */
-    @Value("${async.excutor.thread.max_pool_zise}")
-    private int maxPoolSize;
+   // @Value("${async.excutor.thread.max_pool_zise}")
+    private int maxPoolSize=10;
 
     /**
      * 队列大小
      */
-    @Value("${async.excutor.thread.queue_capacity}")
-    private int queueCapacity;
+   // @Value("${async.excutor.thread.queue_capacity}")
+    private int queueCapacity=10;
     /**
      * 线程前缀名
      */
-    @Value("${async.excutor.thread.name.prefix}")
-    private String namePrefix;
+  //  @Value("${async.excutor.thread.name.prefix}")
+    private String namePrefix="ss";
 
     @Bean(initMethod = "executorInit")
     public TaskService taskService(){
