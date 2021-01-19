@@ -11,6 +11,7 @@ import org.springframework.context.annotation.ComponentScans;
 @ComponentScan(basePackages = {"com.libaoguang.cn.principlepro","com.libaoguang.cn.principledao"})
 @EnableDiscoveryClient
 @SpringBootApplication
+@MapperScan(basePackages= {"com.libaoguang.cn.principledao.mapper"})
 public class PrincipleProApplication {
 
     public static void main(String[] args) {

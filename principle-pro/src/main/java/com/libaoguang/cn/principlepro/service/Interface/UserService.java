@@ -1,6 +1,7 @@
 package com.libaoguang.cn.principlepro.service.Interface;
 
-import com.libaoguang.cn.principlejpa.entity.BasisUser;
+
+import com.libaoguang.cn.principledao.entity.BasisUser;
 
 import java.util.List;
 

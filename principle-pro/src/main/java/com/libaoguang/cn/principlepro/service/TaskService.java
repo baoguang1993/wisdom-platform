@@ -16,16 +16,16 @@ public class TaskService {
         log.warn("TaskService {} executorInit");
         taskExecutorService.eventExecutor();
 
-        for (; ; ) {
-            //查询队列，执行业务逻辑方法
-            taskExecutorService.eventExecutor();
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-        }
+//        for (; ; ) {
+//            //查询队列，执行业务逻辑方法
+//            taskExecutorService.eventExecutor();
+//            try {
+//                Thread.sleep(5000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//
+//        }
 
 
     }

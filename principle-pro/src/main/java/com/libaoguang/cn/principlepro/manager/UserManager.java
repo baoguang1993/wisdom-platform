@@ -1,8 +1,7 @@
 package com.libaoguang.cn.principlepro.manager;
 
 
-import com.libaoguang.cn.principlejpa.entity.BasisUser;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.libaoguang.cn.principledao.entity.BasisUser;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
