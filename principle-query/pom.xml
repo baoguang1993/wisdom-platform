@@ -4,7 +4,6 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.libaoguang.cn</groupId>
     <artifactId>principle-query</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>principle-query</name>
     <description>Demo project for Spring Boot</description>
 
@@ -52,7 +51,6 @@
         <dependency>
             <groupId>com.libaoguang.cn</groupId>
             <artifactId>principle-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
 

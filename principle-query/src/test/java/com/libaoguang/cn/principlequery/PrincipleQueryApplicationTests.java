@@ -1,5 +1,6 @@
 package com.libaoguang.cn.principlequery;
 
+import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.transport.TransportClient;
@@ -11,6 +12,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.Base64;
 
 @Slf4j
 @RunWith(SpringRunner.class)
@@ -32,4 +35,5 @@ public class PrincipleQueryApplicationTests {
        System.out.println("id"+id);
 
    }
+
 }

@@ -20,7 +20,72 @@
         <module>principle-common</module>
         <module>principle-query</module>
         <module>principle-pdf</module>
+        <module>principle-apollo</module>
+        <module>principle-consumer</module>
+        <module>principle-elegant</module>
+        <module>principle-framework</module>
+        <module>principle-jpa</module>
+        <module>principle-producer</module>
     </modules>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.libaoguang.cn</groupId>
+                <artifactId>principle-apollo</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.libaoguang.cn</groupId>
+                <artifactId>principle-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.libaoguang.cn</groupId>
+                <artifactId>principle-dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.libaoguang.cn</groupId>
+                <artifactId>principle-consumer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.libaoguang.cn</groupId>
+                <artifactId>principle-elegant</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.libaoguang.cn</groupId>
+                <artifactId>principle-framework</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.libaoguang.cn</groupId>
+                <artifactId>principle-jpa</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.libaoguang.cn</groupId>
+                <artifactId>principle-pdf</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.libaoguang.cn</groupId>
+                <artifactId>principle-pro</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.libaoguang.cn</groupId>
+                <artifactId>principle-producer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.libaoguang.cn</groupId>
+                <artifactId>principle-query</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <build>
         <plugins>
             <plugin>

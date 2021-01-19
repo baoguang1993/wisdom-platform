@@ -24,7 +24,7 @@ value 绑定的队列名称 autoDelete
 //                key = "message.myrote"
 //        )
 //)
-@RabbitListener(queues = "${myqueue.queuename}")
+@RabbitListener(queues = "token-queue")
 public class MessageConsumer {
     private static Logger logger = LoggerFactory.getLogger(MessageConsumer.class);
 

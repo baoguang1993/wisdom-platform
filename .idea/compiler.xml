@@ -7,13 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="principle-pdf" />
         <module name="principle-consumer" />
+        <module name="principle-jpa" />
+        <module name="principle-producer" />
+        <module name="principle-apollo" />
         <module name="principle-pro" />
         <module name="principle-elegant" />
-        <module name="principle-common" />
+        <module name="principle-pdf" />
+        <module name="principle-framework" />
         <module name="principle-query" />
-        <module name="principle-producer" />
+        <module name="principle-common" />
         <module name="principle-dao" />
       </profile>
     </annotationProcessing>
@@ -23,11 +26,14 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="principle-apollo" options="-parameters" />
       <module name="principle-cache" options="-parameters" />
       <module name="principle-common" options="-parameters" />
       <module name="principle-consumer" options="-parameters" />
       <module name="principle-dao" options="-parameters" />
       <module name="principle-elegant" options="-parameters" />
+      <module name="principle-framework" options="-parameters" />
+      <module name="principle-jpa" options="-parameters" />
       <module name="principle-pdf" options="-parameters" />
       <module name="principle-pro" options="-parameters" />
       <module name="principle-producer" options="-parameters" />

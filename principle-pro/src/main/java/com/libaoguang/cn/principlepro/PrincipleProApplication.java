@@ -8,7 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 
-@ComponentScan(basePackages = {"springconfig","com.libaoguang.cn.principlepro","com.libaoguang.cn.principledao"})
+@ComponentScan(basePackages = {"com.libaoguang.cn.principlepro","com.libaoguang.cn.principledao"})
 @EnableDiscoveryClient
 @SpringBootApplication
 public class PrincipleProApplication {

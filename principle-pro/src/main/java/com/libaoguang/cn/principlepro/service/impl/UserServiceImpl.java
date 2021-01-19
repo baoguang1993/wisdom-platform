@@ -1,6 +1,6 @@
 package com.libaoguang.cn.principlepro.service.impl;
 
-import com.libaoguang.cn.principledao.entity.BasisUser;
+import com.libaoguang.cn.principlejpa.entity.BasisUser;
 import com.libaoguang.cn.principlepro.manager.UserManager;
 import com.libaoguang.cn.principlepro.service.Interface.UserService;
 import lombok.extern.slf4j.Slf4j;
